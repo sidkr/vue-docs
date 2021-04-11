@@ -1,0 +1,61 @@
+.badge{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ 
+    &.info{
+        background-color: #1cb841;
+        color: white;
+        text-align: center;
+        &::before{
+            content: '❕';
+            float: left;
+        }
+    }
+    
+    &.warning{
+        background-color: #b81c47c4;
+        color: white;
+        text-align: center;
+        &::before{
+            content: '🛑';
+            float: left;
+        }
+    }
+}
+
+code{
+    background-color: #484848;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    font-family: 'courier new';
+}
+
+pre {
+    font-family: monospace;
+    background-color: #fff;
+    width: em(440);
+    margin: 4em auto;
+    padding: 0.5em;
+    border-radius: .25em;
+    box-shadow: .1em .1em .5em rgba(0,0,0,.45);
+    line-height: 0;
+    counter-reset: line;
+    
+    span {
+      display: block;
+      line-height: 1.5rem;
+      
+      &:before {
+        counter-increment: line;
+        content: counter(line);
+        display: inline-block;
+        border-right: 1px solid #ddd;
+        padding: 0 .5em;
+        margin-right: .5em;
+        color: #888
+      }
+    }
+  }
